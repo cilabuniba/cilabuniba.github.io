@@ -1,6 +1,7 @@
 ---
 title: "Maria Creanza"
 role: "Ph.D. Student · XLII Cycle"
+homepage: "https://mariacre03.github.io/"
 image: "/images/people/maria-creanza.jpg"
 interests: ["Multimodal Learning", "Trustworthy AI", "Explainable AI", "Digital Mental Health"]
 ---

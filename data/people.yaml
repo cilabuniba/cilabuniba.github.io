@@ -119,6 +119,7 @@
   group: PhD Students
   interests: Neuro-Symbolic AI, Knowledge Graphs, Graph Neural Networks, Explainable AI, Railway Systems
   image: /images/people/lorenzo-abatescianni.jpg
+  homepage: https://dacrow13.github.io/
   slug: lorenzo-abatescianni
   profile: /people/lorenzo-abatescianni/
 - name: Maria Creanza
@@ -126,6 +127,7 @@
   group: PhD Students
   interests: Multimodal Learning, Trustworthy AI, Explainable AI, Digital Mental Health
   image: /images/people/maria-creanza.jpg
+  homepage: https://mariacre03.github.io/
   slug: maria-creanza
   profile: /people/maria-creanza/
 - name: Emanuele Fontana

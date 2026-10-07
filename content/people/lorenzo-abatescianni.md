@@ -1,6 +1,7 @@
 ---
 title: "Lorenzo Abatescianni"
 role: "Ph.D. Student · XLI Cycle"
+homepage: "https://dacrow13.github.io/"
 image: "/images/people/lorenzo-abatescianni.jpg"
 interests: ["Neuro-Symbolic AI", "Knowledge Graphs", "Graph Neural Networks", "Explainable AI", "Railway Systems"]
 ---
