@@ -4,6 +4,14 @@
 
 - category: "recent"
   year: 2026
+  authors: "R. Scaringi, A. Sierra-Múnera, G. Vessio, G. Castellano, R. Krestel"
+  title: "KARAMEL: Knowledge-Aware Ranking for Multimodal Entity Linking in the Arts via Heterogeneous Graphs"
+  venue: "Machine Learning"
+  url: "https://doi.org/10.1007/s10994-026-07172-1"
+  code: "https://github.com/cilabuniba/karamel"
+
+- category: "recent"
+  year: 2026
   authors: "P. De Marinis, A. Iammarino, G. Vessio, G. Castellano"
   title: "WeedDiffusion: A Dual-Branch Synthetic Augmentation Framework for Weed Mapping"
   venue: "International Conference on Pattern Recognition (ICPR)"
