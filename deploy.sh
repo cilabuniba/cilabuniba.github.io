@@ -9,13 +9,18 @@ PUBLISH_BRANCH="gh-pages"
 echo "==> Checking out submodules..."
 git submodule update --init --recursive
 
-echo "==> Building Hugo site..."
+echo "==> Building Hugo site ($(hugo version | cut -d' ' -f1-2))..."
+rm -rf "${PUBLISH_DIR}"
 hugo --minify
 
 echo "==> Deploying to '${PUBLISH_BRANCH}' branch..."
 
 # Get the current repo remote URL
 REMOTE_URL=$(git remote get-url origin)
+
+# Remember the author identity of the source repo
+GIT_EMAIL=$(git config user.email || echo 'deploy@cilab')
+GIT_NAME=$(git config user.name || echo 'Deploy Script')
 
 # Create a temporary directory for the gh-pages branch
 TMP_DIR=$(mktemp -d)
@@ -38,8 +43,8 @@ fi
 cp -r "${PUBLISH_DIR}"/. "${TMP_DIR}/"
 
 cd "${TMP_DIR}"
-git config user.email "$(git -C - config user.email 2>/dev/null || echo 'deploy@cilab')"
-git config user.name  "$(git -C - config user.name  2>/dev/null || echo 'Deploy Script')"
+git config user.email "${GIT_EMAIL}"
+git config user.name  "${GIT_NAME}"
 git add --all
 git commit -m "Deploy: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || echo "Nothing to commit."
 git push origin "${PUBLISH_BRANCH}"
