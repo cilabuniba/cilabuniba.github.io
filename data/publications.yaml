@@ -9,6 +9,24 @@
   venue: "Machine Learning"
   url: "https://doi.org/10.1007/s10994-026-07172-1"
   code: "https://github.com/cilabuniba/karamel"
+  dataset: "https://doi.org/10.5281/zenodo.23019880"
+
+- category: "recent"
+  year: 2026
+  authors: "G. Zaza, R. Scaringi, G. Conserva, D. Leone, G. Casalino"
+  title: "ATLAS: A software for interactive modeling and analysis of homogeneous and heterogeneous graphs"
+  venue: "Neurocomputing"
+  url: "https://doi.org/10.1016/j.neucom.2026.135318"
+  code: "https://github.com/cilabuniba/atlas"
+
+- category: "recent"
+  year: 2026
+  authors: "R. Scaringi, D. Cirilli, M. Minervini, G. Vessio, G. Castellano"
+  title: "Deviation-Based Graph Neural Networks with Kolmogorov-Arnold Transformations for Multiclass Alzheimer’s Disease Classification"
+  venue: "International Conference on Artificial Neural Networks (ICANN)"
+  url: "https://link.springer.com/chapter/10.1007/978-3-032-38407-2_10"
+  code: "https://github.com/MicheleMinervini06/g-mmeh"
+
 
 - category: "recent"
   year: 2026
