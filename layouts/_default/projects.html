@@ -1,4 +1,37 @@
+
 {{ define "main" }}
-<section class="page-hero"><div class="shell narrow"><p class="eyebrow">Research</p><h1>Projects</h1><p class="page-lead">Recent funded and collaborative projects in which CILab members hold or have held scientific leadership roles.</p></div></section>
-<section class="section"><div class="shell project-page-list">{{ range site.Data.projects }}<article><div class="project-meta"><span>{{ .status }}</span>{{ with .period }}<span>{{ . }}</span>{{ end }}</div><h2>{{ .title }}</h2><p>{{ .description }}</p>{{ with .lead }}<p class="project-lead">Scientific lead: {{ . }}</p>{{ end }}<div class="tag-row">{{ range .tags }}<span>{{ . }}</span>{{ end }}</div></article>{{ end }}</div></section>
+
+{{ $active := sort (where site.Data.projects "status" "Active") "period" "desc" }}
+{{ $completed := sort (where site.Data.projects "status" "Completed") "period" "desc" }}
+{{ $projects := append $completed $active }}
+
+<section class="page-hero">
+  <div class="shell narrow">
+    <p class="eyebrow">Research</p>
+    <h1>Projects</h1>
+    <p class="page-lead">Recent funded and collaborative projects in which CILab members hold or have held scientific leadership roles.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell project-page-list">
+    {{ range $projects }}
+    <article>
+      <div class="project-meta">
+        <span>{{ .status }}</span>
+        {{ with .period }}<span>{{ . }}</span>{{ end }}
+      </div>
+      <h2>{{ .title }}</h2>
+      <p>{{ .description }}</p>
+      {{ with .lead }}
+      <p class="project-lead">Scientific lead: {{ . }}</p>
+      {{ end }}
+      <div class="tag-row">
+        {{ range .tags }}<span>{{ . }}</span>{{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
 {{ end }}
